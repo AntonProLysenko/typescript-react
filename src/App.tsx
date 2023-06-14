@@ -1,24 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import Greeting from './components/Greeting';
+import Person from './components/Person';
+import PersonList from './components/PersonList';
+import Status from './components/Status';
+import Heading from './components/Heading';
+import Oscar from './components/Oscar';
+
 function App() {
+
+  const personName ={
+    first:"John",
+    last:"Waine"
+  };
+
+  const nameList = [
+    {
+      first:"Freddie",
+      last:"Mercury"
+    },
+    {
+      first:"Jim",
+      last:"Boy"
+    },
+    {
+      first:"Lady",
+      last:"Gaga"
+    }
+  ]
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Greeting name={'Anton'} messageCounter={99} />{/**Regular props */}
+      <Person name={personName}/>{/**Object Props */}
+      <PersonList names={nameList}/>{/**Array Props */}
+      <Status status = {"loading"}/>{/**Predeclared custom types */}
+      <Oscar>{/**Children React component props */}
+         <Heading>Oscar Goes To Dicaprio!</Heading>{/**Regular Children Props */}
+      </Oscar>
+      
     </div>
   );
 }
