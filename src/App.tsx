@@ -6,6 +6,8 @@ import PersonList from './components/PersonList';
 import Status from './components/Status';
 import Heading from './components/Heading';
 import Oscar from './components/Oscar';
+import Button from './components/Button';
+import Input from './components/Input';
 
 function App() {
 
@@ -39,6 +41,10 @@ function App() {
       <Oscar>{/**Children React component props */}
          <Heading>Oscar Goes To Dicaprio!</Heading>{/**Regular Children Props */}
       </Oscar>
+
+      {/**Here in argument props we can define a specific Element as <HTMLButtonElement> */}
+      <Button handleClick={(evt,id)=>console.log(evt.target,id)}/>{/**Event as props */}
+      <Input value="" handleChange={(evt)=>console.log(evt)}/>
       
     </div>
   );
