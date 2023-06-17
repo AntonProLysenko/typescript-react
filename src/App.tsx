@@ -8,6 +8,7 @@ import Heading from './components/Heading';
 import Oscar from './components/Oscar';
 import Button from './components/Button';
 import Input from './components/Input';
+import Container from './components/Container';
 
 function App() {
 
@@ -45,6 +46,9 @@ function App() {
       {/**Here in argument props we can define a specific Element as <HTMLButtonElement> */}
       <Button handleClick={(evt,id)=>console.log(evt.target,id)}/>{/**Event as props */}
       <Input value="" handleChange={(evt)=>console.log(evt)}/>
+
+
+      <Container styles={{border:"1px solid red", padding:"1rem"}}/>
       
     </div>
   );
