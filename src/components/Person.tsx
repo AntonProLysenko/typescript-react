@@ -1,13 +1,15 @@
 /**Object Props*/
 
-type PersonName={
-    name:{
-        first:string
-        last:string
-    }
-}
+import { PersonProps } from "./Types/Person-types"
 
-export default function Person({name}:PersonName) {
+// type PersonName={
+//     name:{
+//         first:string
+//         last:string
+//     }
+// }
+
+export default function Person({name}:PersonProps) {
   return (
     <div>{name.first} {name.last}</div>
   )
